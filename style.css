@@ -279,15 +279,6 @@ p > img {
 */
 
 @media screen and (max-width: 480px) {
-  html,
-  body {
-    height: 100%;
-  }
-
-  #content {
-    height: 310%;
-  }
-
   .dashboard,
   .description__content {
     grid-template-columns: repeat(1, 1fr);
