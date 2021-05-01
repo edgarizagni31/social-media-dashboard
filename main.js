@@ -1,3 +1,5 @@
+import './style.css';
+
 document.addEventListener("DOMContentLoaded", () => {
   let btn = document.getElementById("active-dark");
   btn.checked = false;
