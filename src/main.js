@@ -1,4 +1,4 @@
-import './style.css';
+require('./style.css');
 
 document.addEventListener("DOMContentLoaded", () => {
   let btn = document.getElementById("active-dark");

@@ -20,6 +20,13 @@
   --YouTube: hsl(348, 97%, 39%);
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url('./assets/fonts/static/Inter-Regular.ttf') format('ttf'),
+       url('./assets/fonts/static/Inter-Medium.ttf') format('ttf'),
+       url('./assets/fonts/static/Inter-Bold.ttf') format('ttf');
+}
+
 /*
  * reset and style initial
 */
