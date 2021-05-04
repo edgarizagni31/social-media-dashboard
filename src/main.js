@@ -1,30 +1,27 @@
-require('./style.css');
+require("./style.css");
 
 document.addEventListener("DOMContentLoaded", () => {
-  let btn = document.getElementById("active-dark");
-  btn.checked = false;
-  const dataDark = document.querySelectorAll("[data-dark]");
-  btn.addEventListener("click", () => {
-    for (let i = 0; i < dataDark.length; i++) {
-      if (
-        dataDark[i].classList[0] === "body" ||
-        dataDark[i].classList[0] === "html"
-      ) {
-        dataDark[i].classList.toggle("bg-dark");
-      }
-      if (
-        dataDark[i].classList[0] === "header__title" ||
-        dataDark[i].classList[0] === "description__title" ||
-        dataDark[i].classList[0] === "data__type"
-      ) {
-        dataDark[i].classList.toggle("title-dark");
-      }
-      if (
-        dataDark[i].classList[0] === "dashboard__social-media" ||
-        dataDark[i].classList[0] === "description__data"
-      ) {
-        dataDark[i].classList.toggle("bg-card-dark");
-      }
-    }
-  });
+  let btnActiveDark = document.getElementById("active-dark");
+
+  btnActiveDark.checked = false;
+
+  btnActiveDark.addEventListener("click", handleActiveDark);
 });
+
+const handleActiveDark = () => {
+  const BG_DARK_ATTRIBUTES = document.querySelectorAll('[bg-dark]');
+  const TITLE_DARK_ATTRIBUTES = document.querySelectorAll('[title-dark]');
+  const BG_CARD_DARK_ATTRIBUTES = document.querySelectorAll('[bg-card-dark]');
+
+  BG_DARK_ATTRIBUTES.forEach( ( value ) => {
+    value.classList.toggle('bg-dark');
+  })
+
+  TITLE_DARK_ATTRIBUTES.forEach( ( value ) => {
+    value.classList.toggle('title-dark')
+  })
+
+  BG_CARD_DARK_ATTRIBUTES.forEach( ( value ) => {
+    value.classList.toggle('bg-card-dark')
+  })
+};
