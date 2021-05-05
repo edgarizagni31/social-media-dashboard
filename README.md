@@ -4,10 +4,10 @@
 
 ![Screenshot](smd.png)
 
-## Descripcion
-Es una pagina estatica que muestra ciertos datos de una
-determianda red social. Para esto se uso las siguientes 
-tecnologias:
+## Descripción
+Es una página estática que muestra ciertos datos de una determinada red social.
+
+## Tecnologías usadas
 
 Para el desarrollo:
 
@@ -15,12 +15,12 @@ Para el desarrollo:
 - CSS
 - JavaScript 
 
-Para el build del proyecto: 
+Para el build: 
 
 - Babel
 - Webpack
 
-Para el testing de la pagina:
+Para el testing:
 
 - Cypress
 
