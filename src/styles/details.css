@@ -1,0 +1,21 @@
+.description__data {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 10px;
+}
+
+.data__type {
+  color: var(--VeryDarkBlueTxt);
+}
+
+.data__percent,
+.data__icon {
+  justify-self: end;
+}
+
+.data__number {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
