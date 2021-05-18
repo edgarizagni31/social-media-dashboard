@@ -9,10 +9,10 @@ Es una página estática que muestra ciertos datos de una determinada red social
 - JavaScript 
 
 Se uso el concepto de web component para esto utilice webpack para crear un unico build de todos
-los web componets creados.
+los web components creados.
 
 ## Testing
-Use Cypress para evaluar que el tema cambiaba correctamente, evaluando si las clases se moestaban 
+Use Cypress para evaluar que el tema cambiaba correctamente, evaluando si las clases se mostraban
 correctamennte.
 
 ![Screenshot](testing.png)
