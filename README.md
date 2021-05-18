@@ -1,26 +1,24 @@
-# [Social Media Dash](https://socialmediadash.netlify.app/)
-
-![Screenshot](smd1.png) 
-
-![Screenshot](smd.png)
-
+# [Social Media Dashboard](https://socialmediadash.netlify.app/)
 ## Descripción
 Es una página estática que muestra ciertos datos de una determinada red social.
 
-## Tecnologías usadas
-
-Para el desarrollo:
+## Contruido con
 
 - HTML
 - CSS
 - JavaScript 
 
-Para el build: 
+Se uso el concepto de web component para esto utilice webpack para crear un unico build de todos
+los web componets creados.
 
-- Babel
-- Webpack
+## Testing
+Use Cypress para evaluar que el tema cambiaba correctamente, evaluando si las clases se moestaban 
+correctamennte.
 
-Para el testing:
+![Screenshot](testing.png)
 
-- Cypress
+## Uso 
 
+Use 'npm install' para instalar las dependencias del proyecto  
+Para crear el build con webpack use 'npm run build'  
+Para abrir el test suite de cypreess use 'npm run cypreess:open'
