@@ -10,7 +10,7 @@ module.exports = {
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname,'dist'),
-        filename: 'index.js'
+        filename: 'index.[contenthash].js',
     },
     resolve: {
         extensions: ['js']
@@ -30,6 +30,10 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     'css-loader'
                 ]
+            },
+            {
+                test:  /\.(png|svg)$/,
+                type: 'asset/resource'
             },
             {
                 test: /\.ttf$/,
