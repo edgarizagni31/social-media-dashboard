@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TercerWebpackPlugin = require('terser-webpack-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
+const FontminPlugin = require('fontmin-webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -68,16 +69,17 @@ module.exports = {
                 }
             ]
         }),
+        new FontminPlugin({
+            autodetect: true, // automatically pull unicode characters from CSS
+            glyphs: ['\uf0c8' /* extra glyphs to include */],
+        }),
         new CleanWebpackPlugin()
     ],
     optimization: {
         minimize: true,
         minimizer: [
-                new TercerWebpackPlugin(),
-                new CssMinimizerWebpackPlugin()
-        ],
-        splitChunks: {
-           chunks: 'all',
-        },
+            new TercerWebpackPlugin(),
+            new CssMinimizerWebpackPlugin()
+        ]
     }
 }
