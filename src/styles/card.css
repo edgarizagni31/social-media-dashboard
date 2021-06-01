@@ -1,46 +1,31 @@
 .dashboard__social-media {
+  background-color: var(--LightBlueCardBG);
+  border-radius: 5px;
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.dashboard__social-media,
-.description__data {
-  background-color: var(--LightBlueCardBG);
-  border-radius: 5px;
+.social-media__item,
+.social-media__data {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
-.border-fb {
-  border-top: 5px solid var(--Facebook);
-}
-
-.border-ig {
-  border-top: 5px solid transparent;
-  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%))
-    1;
-}
-
-.border-yt {
-  border-top: 5px solid var(--YouTube);
-}
-
-.border-tw {
-  border-top: 5px solid var(--Twitter);
-}
-
-p > img {
+.social-media__item img {
   margin-right: 5px;
 }
 
-.social-media__user,
-.social-media__today,
-.data__percent {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.social-media__data {
+ flex-direction: column;
 }
 
+.social-media__user,
+.social-media__today {
+  align-items: center;
+  display: flex;
+}
 
 .social-media__data {
   font-size: 2.5rem;
@@ -51,7 +36,24 @@ p > img {
 
 .txt-follow {
   color: var(--DesaturatedBlueTxt);
-  display: block;
   font-size: 0.8rem;
   letter-spacing: 3px;
+}
+
+/* | BORDERS */
+.border-fb {
+  border-top: 5px solid var(--Facebook);
+}
+
+.border-ig {
+  border-top: 5px solid transparent;
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1;
+}
+
+.border-yt {
+  border-top: 5px solid var(--YouTube);
+}
+
+.border-tw {
+  border-top: 5px solid var(--Twitter);
 }
