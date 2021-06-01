@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="social media dashboard @nat">
+    <meta name="description" content="social media dashboard @nat" />
     <link
       rel="shortcut icon"
       href="./assets/images/dashboard.png"
@@ -11,37 +11,43 @@
     />
     <title>SocialMedia Dashboard</title>
   </head>
-  <body  data-cy="bg-dark" bg-dark>
+  <body data-cy="bg-dark" bg-dark>
     <div class="wrapper">
       <header class="header">
-        <h1 
-          class="header__title" 
-          data-cy="title-dark"
-          title-dark
-        >
+        <h1 class="header__title" data-cy="title-dark" title-dark>
           Social Media Dashboard
         </h1>
-        <p class="header__desc" >Total Followers: 23,004</p>
-        <p class="header__label">
-          Dark Mode
-          <input 
-            type="checkbox" 
-            data-cy = "activeDarkTheme" 
-            class="header__toggle" 
+        <p class="header__desc">Total Followers: 23,004</p>
+        <div class="header__label">
+          <label for="active-dark">
+            Dark mode
+          </label>
+          <input
+            type="checkbox"
+            data-cy="activeDarkTheme"
+            class="header__toggle"
             id="active-dark"
-          >
-          </input>
-        </p>
+            role="checkbox"
+          />
+        </div>
       </header>
-      <main class="dashboard" id="cards"></main>
-      <section class="description">
-        <h2 class="description__title"
-          data-cy="title-dark"
-          title-dark
-        >
+      <main
+        class="dashboard"
+        id="cards"
+        aria-live="assertive"
+        aria-atomic="true"
+        role="main"
+      ></main>
+      <section class="description" role="contentinfo">
+        <h2 class="description__title" data-cy="title-dark" title-dark>
           Overview - Today
         </h2>
-        <div class="description__cards" id="details"></div>
+        <div
+          class="description__cards"
+          id="details"
+          aria-live="assertive"
+          aria-atomic="true"
+        ></div>
       </section>
     </div>
   </body>
