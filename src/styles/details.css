@@ -4,7 +4,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  padding: 10px;
+  gap: 1.25rem;
+  padding: .625rem;
 }
 
 .data__type {
@@ -15,7 +16,6 @@
   display: flex;
   align-items: center;
 }
-
 
 .data__percent,
 .data__icon {
@@ -28,5 +28,14 @@
 }
 
 .mr-5 {
-  margin-right: 5px;
+  margin-right: .3125rem;
+}
+
+  
+@media screen  and (min-width: 480px) and ( max-width: 796px )  {
+  .description__data {
+    margin: .3125rem;
+    gap: 0;
+  }
+
 }
