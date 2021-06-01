@@ -11,23 +11,28 @@ export const Card = ( borderClass, icon, name, username, followers, { number, in
           bg-card-dark
         >
           <div>
-            <p class="social-media__user">
+            <div class="social-media__item">
               <img src= ${URL_IMGAGES + icon}  alt= ${ name } />
-              ${ username }
-            </p>
-            <p class="social-media__data">
-              ${ followers }
-              <span class="txt-follow">FOLLOWERS</span>
-            </p>
-            <p 
-                class="social-media__today 
-                ${ increment ? 'icon-up': 'icon-down' }"
+              <p>${ username }</p>
+            </div>
+            <div class="social-media__data">
+              <p>${ followers }</p> 
+              <p class="txt-follow" text-follow--dark>FOLLOWERS</p>
+            </div>
+            <div 
+              class="social-media__item"
             >
               <img 
                 src=${ increment ?  './assets/images/icon-up.svg' :  './assets/images/icon-down.svg'}  
+                alt = "describe icon"
               />
-              ${ number } Today
-            </p>
+              <p 
+                class= ${ increment ? 'text-increment' : 'text-danger'}
+                text-dark = ${increment}
+              > 
+                ${ number } Today 
+              </p>
+            </div>
           </div>
         </article>
     `

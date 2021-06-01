@@ -3,7 +3,8 @@
 import { handleActiveDark } from './utils/theme.js';
 import { displayTemplates } from './utils/displayTemplates.js';
 
-import './style.css';
+import './styles/normalize.css';
+import './styles/style.css';
 
 document.addEventListener("DOMContentLoaded", () => {
   const btnActiveDark = document.getElementById('active-dark');

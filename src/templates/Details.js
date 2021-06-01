@@ -1,6 +1,6 @@
 import '../styles/details.css';
 
-export const Details = ( desc, icon, number, { percent, increment } ) => {
+export const Details = ( desc, icon, iconName, number, { percent, increment } ) => {
     const URL_IMGAGES = './assets/images/';
     const view = `
         <article 
@@ -15,16 +15,18 @@ export const Details = ( desc, icon, number, { percent, increment } ) => {
             > 
               ${ desc } 
             </p>
-            <img src=${ URL_IMGAGES + icon } class="data__icon" />
+            <img src=${ URL_IMGAGES + icon } class="data__icon"  alt = ${iconName}/>
             <p class="data__number"> ${ number  }  </p>
-            <p 
-              class="data__percent ${ increment ?  'icon-up' : 'icon-down' } "
+            <div 
+              class="data__percent"
             >
               <img 
                 src=${ increment ? URL_IMGAGES + 'icon-up.svg' : URL_IMGAGES + 'icon-down.svg' } 
+                class = "mr-5"
+                alt="describe icon"
               />
-              ${ percent }%
-            </p>
+                <p class = ${ increment ? 'text-increment' : 'text-danger'} text-dark = ${increment}> ${ percent }% </p>
+            </div>
         </article>
     `
 
