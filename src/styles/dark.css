@@ -1,0 +1,29 @@
+.bg-dark {
+    background-color: var(--DarkBlueBG);
+}
+
+.title-dark {
+    color: var(--WhiteTxt);
+}
+
+.lbl-dark {
+    color: var(--DesaturatedBlueTxt);
+}
+
+.bg-card-dark {
+    background-color: var(--DarkBlueCardBG);
+    box-shadow: .3125rem .25rem .9375rem -0.3125rem rgba(0, 0, 0, 0.1);
+    color: var(--WhiteTxt);
+}
+
+.text-increment--dark {
+    color: var(--LimeGreenDark);
+}
+
+.text-danger--dark {
+    color: var(--BrightRedDark);
+}
+
+.txt-follow--dark {
+    color: var(--DesaturatedBlueTextDark);
+}
