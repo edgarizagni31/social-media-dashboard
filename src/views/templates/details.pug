@@ -1,0 +1,23 @@
+mixin details( datadetails )
+    article.description__data(
+        data-cy= "bg-card-dark"
+        bg-card-dark
+    )
+        p.data__type(
+            data-cy= "title-dark"
+            title-dark
+        )= datadetails.desc 
+        img.data__icon(
+            src= URL_IMAGES + datadetails.icon 
+            alt= datadetails.name
+        )
+        p.data__number= datadetails.number 
+        .data__percent
+            img.mr-5(
+                src= URL_IMAGES + `${ datadetails.increment ? 'icon-up' : 'icon-down' }.svg `
+                alt= "describe icon"
+            )
+            p(
+                class= `${ datadetails.increment ? 'text-increment': 'text-danger' }`
+                text-dark= "" + datadetails.increment
+            )= datadetails.percent + "%"

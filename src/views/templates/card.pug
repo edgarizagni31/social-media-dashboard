@@ -1,0 +1,26 @@
+mixin card( datacard ) 
+    article.dashboard__social-media(
+        class= datacard.bordercolor,
+        data-cy= "bg-card-dark",
+        bg-card-dark
+    )
+        div 
+            .social-media__item
+                img.mr-5(
+                    src= URL_IMAGES + datacard.icon
+                    alt= datacard.name
+                )
+                p= datacard.username
+            .social-media__data 
+                p= datacard.followers
+                p.txt-follow(text-follow-dark) FOLLOWERS
+            .social-media__item 
+                img(
+                    src= URL_IMAGES + `${ datacard.increment ? 'icon-up' : 'icon-down' }.svg `
+                    alt="describe icon"
+                )
+                p(
+                    class= `${ datacard.increment ? 'text-increment': 'text-danger' }`,
+                    text-dark= "" + datacard.increment
+                )= `${datacard.number} Today`
+

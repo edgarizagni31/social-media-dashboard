@@ -1,0 +1,41 @@
+include ./base/variables.pug 
+include ./templates/card.pug
+include ./templates/details.pug
+
+doctype
+html(lang='es')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Social media description @nat")
+    title Social Media Dash
+    link(rel="shortcut icon", href="../assets/images/dashboard.png", type="image/png")
+  body(bg-dark)
+    .wrapper 
+      header.header
+        h1.header__title(data-cy="title-dark",title-dark="") Social Media Dashboard
+        p.header__desc Total Followers: 23,004
+        .header__label 
+          label(for="active-dark") Dark mode 
+          input(
+            type="checkbox"
+            data-cy="activeDarkTheme"
+            class="header__toggle"
+            id="active-dark"
+          )
+      main.dashboard 
+        +card(dataCardFb)
+        +card(dataCardTw)
+        +card(dataCardIg)
+        +card(dataCardYt)
+      section.description 
+        h2.description__title(data-cy="title-dark",title-dark) Overview - Today
+        .description__cards
+          +details(dataDetailsFbViews)
+          +details(dataDetailsFbLikes)
+          +details(dataDetailsIgViews)
+          +details(dataDetailsIgLikes)
+          +details(dataDetailsTwRetweets)
+          +details(dataDetailsTwLikes)
+          +details(dataDetailsYtViews)
+          +details(dataDetailsYtlikes)
