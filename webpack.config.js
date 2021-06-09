@@ -66,7 +66,7 @@ const rulesFont = {
     }
 }
 
-rules.push(rulesPug,rulesCss,rulesJS,rulesJpg,rulesSvg,rulesFont);
+rules.push(rulesPug,rulesCss,rulesJS,rulesJpg,rulesSvg);
 
 module.exports = {
     entry: './src/main.js',
