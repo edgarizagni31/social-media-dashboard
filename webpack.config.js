@@ -2,10 +2,8 @@
 const path = require('path');
 const HtmlWebpackPlugin =  require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TercerWebpackPlugin = require('terser-webpack-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
-const FontminPlugin = require('fontmin-webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // elements of the webpack configuration
@@ -51,22 +49,7 @@ const rulesSvg = {
     type: 'asset/inline'
 }
 
-const rulesFont = {
-    test: /\.ttf$/,
-    use: {
-        loader: 'url-loader',
-        options: {
-            limit: 10000,
-            minetype: 'application/font-ttf',
-            name: '[name].[contenthash].[ext]',
-            outputPath: './assets/fonts/',
-            publicPath: './assets/fonts/',
-            esModule: true
-        }
-    }
-}
-
-rules.push(rulesPug,rulesCss,rulesJS,rulesJpg,rulesSvg);
+rules.push(rulesPug, rulesCss, rulesJS, rulesJpg, rulesSvg);
 
 module.exports = {
     entry: './src/main.js',
@@ -89,11 +72,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css'
         }),
-        new FontminPlugin({
-            autodetect: true, 
-            glyphs: ['\uf0c8'],
-        }),
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin()
     ],
     optimization: {
         minimize: true,
