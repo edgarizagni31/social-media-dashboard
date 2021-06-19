@@ -22,14 +22,6 @@
   --Twitter: hsl(203, 89%, 53%);
   --YouTube: hsl(348, 97%, 39%);
 }
-/* 
-@font-face {
-  font-family: "Inter";
-  src: url(../assets/fonts/Inter-Regular.ttf) format('truetype'),
-    url(../assets/fonts/Inter-Medium.ttf) format('truetype'),
-    url(../assets/fonts/Inter-Bold.ttf) format('truetype');
-}
-*/
 
 html {
   box-sizing: border-box;
@@ -39,8 +31,6 @@ html {
 html.wf-active {
   font-family: 'Inter', sans-serif;
 }
-
-
 
 *,
 *::after,
@@ -244,7 +234,7 @@ body {
   font-weight: 900;
 }
 
-/*  | INCONS */
+/*  | ICONS */
 
 .icon-up,
 .icon-down {
