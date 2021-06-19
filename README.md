@@ -4,14 +4,14 @@ Es una página estática que muestra información sobre las redes del usuario @n
 
 ## Contruido con
 
-- Pug
+- [Pug](https://pugjs.org/api/getting-started.html)
 - CSS
 - JavaScript 
-- Webpack
+- [Webpack](https://webpack.js.org/)
 
 ## Testing
-Use Cypress para evaluar que el tema cambiaba correctamente, evaluando si las clases se mostraban
-correctamennte.
+Use Cypress para evaluar que el tema oscuro funcionara correctamente, evaluando si las reglas css
+se aplicaban a los elementos.
 
 ![Screenshot](testing.png)
 
