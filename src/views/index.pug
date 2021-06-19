@@ -10,7 +10,7 @@ html(lang='es')
     meta(name="description", content="Social media description @nat")
     title Social Media Dash
     link(rel="shortcut icon", href="../assets/images/dashboard.png", type="image/png")
-  body(bg-dark)
+  body(bg-dark data-cy = "bg-dark")
     .wrapper 
       header.header
         h1.header__title(data-cy="title-dark",title-dark="") Social Media Dashboard
@@ -38,8 +38,8 @@ html(lang='es')
           +details(dataDetailsTwRetweets)
           +details(dataDetailsTwLikes)
           +details(dataDetailsYtViews)
-          +details(dataDetailsYtlikes)
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+          +details(dataDetailsYtLikes)
+  script(src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js") 
   script.
     WebFont.load({
       google: {

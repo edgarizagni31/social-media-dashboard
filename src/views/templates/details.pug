@@ -1,4 +1,4 @@
-mixin details( datadetails )
+mixin details( dataDetails )
     article.description__data(
         data-cy= "bg-card-dark"
         bg-card-dark
@@ -6,18 +6,18 @@ mixin details( datadetails )
         p.data__type(
             data-cy= "title-dark"
             title-dark
-        )= datadetails.desc 
+        )= dataDetails.desc 
         img.data__icon(
-            src= URL_IMAGES + datadetails.icon 
-            alt= datadetails.name
+            src= URL_IMAGES + dataDetails.icon 
+            alt= dataDetails.name
         )
-        p.data__number= datadetails.number 
+        p.data__number= dataDetails.number 
         .data__percent
             img.mr-5(
-                src= URL_IMAGES + `${ datadetails.increment ? 'icon-up' : 'icon-down' }.svg `
+                src= URL_IMAGES + `${ dataDetails.increment ? 'icon-up' : 'icon-down' }.svg `
                 alt= "describe icon"
             )
             p(
-                class= `${ datadetails.increment ? 'text-increment': 'text-danger' }`
-                text-dark= "" + datadetails.increment
-            )= datadetails.percent + "%"
+                class= `${ dataDetails.increment ? 'text-increment': 'text-danger' }`
+                text-dark= "" + dataDetails.increment
+            )= dataDetails.percent + "%"
